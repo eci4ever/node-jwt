@@ -54,7 +54,6 @@ router.post('/login', async (req, res) => {
 // function to verify token
 function verifyToken(req, res, next) {
     const token = req.headers['authorization'];
-    console.log(token);
     if (!token) {
         return res.status(403).json({ error: 'A token is required for authentication.' });
     }

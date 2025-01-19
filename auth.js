@@ -94,4 +94,9 @@ router.get('/users/:id', verifyToken, async (req, res) => {
     }
 });
 
+// logout user 
+router.post('/logout', verifyToken, (req, res) => {
+    res.json({ message: 'User logged out successfully.' });
+});
+
 module.exports = router;

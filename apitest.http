@@ -14,8 +14,14 @@ Content-Type: application/json
 
 {
     "email": "user@local.com",
-    "password": ""
+    "password": "password"
 }
+
+### Logout (requires Authorization header)
+POST http://localhost:3000/auth/logout
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ1c2VyQGxvY2FsLmNvbSIsImlhdCI6MTczNzAxNjQyMiwiZXhwIjoxNzM3MDIwMDIyfQ.j91vvJIzqeZdszzzx8kJhwQXSGwZyDCJ_uS1FBif4p0
+
 
 ### Get all users
 GET http://localhost:3000/auth/users
@@ -24,7 +30,7 @@ Content-Type: application/json
 ### Get a single user by ID
 GET http://localhost:3000/auth/users/1
 Content-Type: application/json
-Authorization: Bearer <token>
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ1c2VyQGxvY2FsLmNvbSIsImlhdCI6MTczNzAxNjQyMiwiZXhwIjoxNzM3MDIwMDIyfQ.j91vvJIzqeZdszzzx8kJhwQXSGwZyDCJ_uS1FBif4p0
 
 
 ### Create a new user
